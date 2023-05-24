@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kaomoji fixer</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css"
+    />
+  </head>
+  <body>
     <h1>Kaomoji fixer</h1>
-    <hr>
+    <hr />
     <textarea id="input" placeholder="input text here"></textarea>
     <button id="submit" onclick="fix()">Fix!</button>
-    <hr>
+    <hr />
     <textarea id="output" placeholder="result" disabled></textarea>
     <script>
-        function fix(){
-            let input = document.querySelector('#input').value;
-            input = input.replaceAll("\\","\\\\");
-            input = input.replaceAll("|","\\|");
-            input = input.replaceAll("*","\\*");
-            input = input.replaceAll("_","\\_");
-            input = input.replaceAll("`","\\`");
-            input = input.replaceAll(">","\\>");
-            input = input.replaceAll("~","\\~");
-            document.querySelector('#output').value = input;
-        }
+      function fix() {
+        let input = document.querySelector("#input").value;
+        input = input.replaceAll("\\", "\\\\");
+        input = input.replaceAll("|", "\\|");
+        input = input.replaceAll("*", "\\*");
+        input = input.replaceAll("_", "\\_");
+        input = input.replaceAll("`", "\\`");
+        input = input.replaceAll(">", "\\>");
+        input = input.replaceAll("~", "\\~");
+        document.querySelector("#output").value = input;
+      }
     </script>
-</body>
+  </body>
 </html>
